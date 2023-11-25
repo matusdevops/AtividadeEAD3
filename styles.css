@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: fixed; /* Torna o cabeçalho fixo no topo */
+    width: 100%; /* Faz com que o cabeçalho ocupe toda a largura da tela */
+    top: 0; /* Alinha o cabeçalho no topo da página */
+    z-index: 1000; /* Certifica-se de que o cabeçalho esteja acima de outros elementos */
+}
+
+main {
+    max-width: 800px;
+    margin: 80px auto 20px; /* Ajusta a margem superior para deixar espaço para o cabeçalho fixo */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#questions {
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.question::after {
+    content: '\1F4AC'; /* Unicode para um ícone de sino (você pode usar outro código Unicode) */
+    font-size: 20px;
+    color: #3498db;
+    margin-left: 10px;
+    opacity: 0; /* Inicialmente, tornamos o ícone invisível */
+    transition: opacity 0.3s ease; /* Adicionamos uma transição de opacidade */
+}
+
+.question:hover::after {
+    opacity: 1; /* Tornamos o ícone visível ao passar o mouse sobre a pergunta */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-top: 2px solid black; /* Adiciona uma borda preta na parte superior do rodapé */
+}
